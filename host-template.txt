@@ -1,0 +1,2 @@
+# host_ip ssh_password ssh_port(default 22) ssh_user(default root)
+127.0.0.1 password 22222 username

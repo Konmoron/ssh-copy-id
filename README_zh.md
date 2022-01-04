@@ -1,37 +1,37 @@
 # ssh-copy-id
 
-[中文](./README_zh.md)
+[en](README.md)
 
-automate copy ssh public key to multiple remote servers
+拷贝 `ssh public key` 到多个服务器。
 
-using this script help you to copy your ssh key to multiple remote servers with just one command.
-
-first install sshpass using below command:
+安装 `sshpass`:
 
 ```shell
 apt install sshpass -y
 ```
 
-then generate your ssh-key with ssh-key command.
-
-after that you should create host.txt:
+创建 `host.txt`:
 
 ```shell
 # host_ip ssh_password ssh_port(default 22) ssh_user(default root)
 127.0.0.1 password 22222 username
 ```
 
+部署 `sshcopyid.sh`
+
 ```shell
 chmod +x sshcopyid.sh
 ./sshcopyid.sh
 ```
 
-for example:
+示例:
 
 ```shell
-# sshcopyid.sh default use host.txt
+# sshcopyid.sh 默认使用当前目录的 host.txt
 ./sshcopyid.sh
+# 指定 host 文件
 ./sshcopyid.sh -f host_a.txt
+# 如果指定 ip，则 password 也需要指定
 ./sshcopyid.sh -i 127.0.0.1 -P sshpassword -p sshport -u sshuser
 ```
 
