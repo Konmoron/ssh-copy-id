@@ -51,3 +51,7 @@ Options:
   -P, --ssh-password    ssh password
   -h, --help            display this help and exit
 ```
+
+致谢:
+
+- [Ahmad-Rahimizadeh](https://github.com/Ahmad-Rahimizadeh/ssh-copy-id)
