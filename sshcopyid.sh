@@ -108,6 +108,8 @@ else
     while read -u 9 ssh_ip ssh_pwd ssh_port ssh_user || [[ -n $ssh_ip ]];do
         echo $ssh_ip | grep \# && continue
 
+        if [[ X$ssh_ip == X ]];then continue;fi
+
         if [[ X$ssh_port == X ]];then ssh_port=22;fi
         if [[ X$ssh_user == X ]];then ssh_user=root;fi
 
