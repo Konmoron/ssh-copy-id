@@ -106,7 +106,7 @@ else
     fi
 
     while read -u 9 ssh_ip ssh_pwd ssh_port ssh_user || [[ -n $ssh_ip ]];do
-        echo $ssh_ip | grep \# && continue
+        echo $ssh_ip | grep -q \# && continue
 
         if [[ X$ssh_ip == X ]];then continue;fi
 
